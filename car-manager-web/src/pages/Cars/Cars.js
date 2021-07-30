@@ -17,14 +17,6 @@ class Cars extends Component {
             cars: [],
             brands: [],
             open: false,
-            nome: "",
-            km_por_galao: "",
-            cilindros: "",
-            peso: "",
-            aceleracao: "",
-            ano: "",
-            origem: "",
-            marca_id: "",
             car: {
                 nome: "",
                 km_por_galao: "",
@@ -169,6 +161,7 @@ class Cars extends Component {
                                 value={car.nome}
                                 onChange={e => this.setState({ car: Object.assign(this.state.car, { nome: e.target.value }) })}
                             />
+                            <span>Kilometros por galão:</span>
                             <input
                                 class="input"
                                 type="text"
@@ -176,36 +169,42 @@ class Cars extends Component {
                                 value={car.km_por_galao}
                                 onChange={e => this.setState({ car: Object.assign(this.state.car, { km_por_galao: e.target.value }) })}
                             />
+                            <span>Cilindros:</span>
                             <input
                                 type="text"
                                 placeholder="Cilindros"
                                 value={car.cilindros}
                                 onChange={e => this.setState({ car: Object.assign(this.state.car, { cilindros: e.target.value }) })}
                             />
+                            <span>Peso:</span>
                             <input
                                 type="text"
                                 placeholder="Peso"
                                 value={car.peso}
                                 onChange={e => this.setState({ car: Object.assign(this.state.car, { peso: e.target.value }) })}
                             />
+                            <span>Aceleração:</span>
                             <input
                                 type="text"
                                 placeholder="Aceleração"
                                 value={car.aceleracao}
                                 onChange={e => this.setState({ car: Object.assign(this.state.car, { aceleracao: e.target.value }) })}
                             />
+                            <span>Ano:</span>
                             <input
                                 type="text"
                                 placeholder="Ano"
                                 value={car.ano}
                                 onChange={e => this.setState({ car: Object.assign(this.state.car, { ano: e.target.value }) })}
                             />
+                            <span>Origem:</span>
                             <input
                                 type="text"
                                 placeholder="Origem"
                                 value={car.origem}
                                 onChange={e => this.setState({ car: Object.assign(this.state.car, { origem: e.target.value }) })}
                             />
+                            <span>Marca</span>
                             <Select className="select_marca" value={car.marca_id} onChange={e => this.setState({ car: Object.assign(this.state.car, { marca_id: e.target.value }) })}>
                                 {this.brandItem()}
                             </Select>

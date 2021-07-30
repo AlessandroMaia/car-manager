@@ -14,8 +14,6 @@ class Brands extends Component {
         this.state = {
             brands: [],
             open: false,
-            nome: "",
-            origem: "",
             brand: {
                 nome: "",
                 origem: ""
@@ -131,6 +129,7 @@ class Brands extends Component {
                                 value={brand.nome}
                                 onChange={e => this.setState({ brand: Object.assign(this.state.brand, { nome: e.target.value }) })}
                             />
+                            <span>Origem:</span>
                             <input
                                 type="text"
                                 placeholder="Origem"
